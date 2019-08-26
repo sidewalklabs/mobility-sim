@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu Aug 15 18:28:58 2019 by Eclipse SUMO netedit Version 1.2.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/Users/joyce@intern.sidewalklabs.com/Documents/sumo-test/toronto/toronto-netedit.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/Users/joyce@intern.sidewalklabs.com/Documents/sumo-test/toronto/toronto-netedit.net.xml"/>
+        <plain-output-prefix value="/Users/joyce@intern.sidewalklabs.com/Documents/sumo-test/toronto/toronto-netedit"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="false"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="true"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+
+<!--
+
+          B_NS_1         A_NS_1         A_NS_2         A_NS_3   B_D1
+            ||             ||             ||             ||      ||
+            ||             ||             ||             ||        ||
+T_EW_0 == B_NS_2 ======= T_EW_1 ======= T_EW_2 ======= T_EW_3 === T_EW_4
+            ||             ||             ||             ||          ||            
+            ||             ||             ||             ||            ||   
+          B_NS_3 ======= L_EW_1 ======= L_EW_2 ======= L_EW_3 ====== L_EW_4
+            ||             ||             ||             ||              ||
+            ||             ||             ||             ||                ||
+B_EW_0 == B_NS_4 ======= B_EW_1 ======= B_EW_2 ======= B_EW_3 ========== B_EW_4 == B_EW_out
+            ||             ||             ||             ||
+            ||             ||             ||             ||
+          B_NS_5         A_NS_1_X       A_NS_2_X       A_NS_3_X
+
+-->
+
+<nodes version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <location netOffset="450.00,200.00" convBoundary="0.00,-20.00,1000.00,550.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <node id="A_NS_1" x="243.00" y="570.00" type="unregulated"/>
+    <node id="A_NS_2" x="466.00" y="570.00" type="unregulated"/>
+    <node id="A_NS_3" x="675.00" y="570.00" type="unregulated"/>
+    <node id="A_NS_1_X" x="243.00" y="-20.00" type="unregulated"/>
+    <node id="A_NS_2_X" x="466.00" y="-20.00" type="unregulated"/>
+    <node id="A_NS_3_X" x="675.00" y="-20.00" type="unregulated"/>
+
+    <node id="B_D1" x="828.00" y="570.00" type="unregulated"/>
+    <node id="B_EW_0" x="0.00" y="65.00" type="unregulated"/>
+    <node id="B_EW_1" x="243.00" y="65.00" type="traffic_light" tl="B_EW_1"/>
+    <node id="B_EW_2" x="466.00" y="65.00" type="traffic_light" tl="B_EW_2"/>
+    <node id="B_EW_3" x="675.00" y="65.00" type="traffic_light" tl="B_EW_3"/>
+    <node id="B_EW_4" x="968.00" y="65.00" type="traffic_light" tl="B_EW_4"/>
+    <node id="B_EW_out" x="1000.00" y="65.00" type="unregulated"/>
+    <node id="B_NS_1" x="55.00" y="570.00" type="unregulated"/>
+    <node id="B_NS_2" x="55.00" y="376.70" type="traffic_light" tl="B_NS_2"/>
+    <node id="B_NS_3" x="55.00" y="278.17" type="traffic_light" tl="B_NS_3"/>
+    <node id="B_NS_4" x="55.00" y="65.00" type="traffic_light" tl="B_NS_4"/>
+    <node id="B_NS_5" x="55.00" y="-20.00" type="unregulated"/>
+    <node id="L_EW_1" x="243.00" y="236.00" type="unregulated"/>
+    <node id="L_EW_2" x="466.00" y="220.00" type="unregulated"/>
+    <node id="L_EW_3" x="675.00" y="205.00" type="unregulated"/>
+    <node id="L_EW_4" x="923.00" y="225.00" type="unregulated"/>
+    <node id="T_EW_0" x="0.00" y="376.00" type="unregulated"/>
+    <node id="T_EW_1" x="243.00" y="394.00" type="traffic_light" tl="T_EW_1"/>
+    <node id="T_EW_2" x="466.00" y="410.00" type="traffic_light" tl="T_EW_2"/>
+    <node id="T_EW_3" x="675.00" y="410.00" type="traffic_light" tl="T_EW_3"/>
+    <node id="T_EW_4" x="873.00" y="410.00" type="unregulated"/>
+</nodes>

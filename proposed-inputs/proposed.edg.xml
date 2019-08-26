@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Thu Aug 15 18:28:58 2019 by Eclipse SUMO netedit Version 1.2.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/Users/joyce@intern.sidewalklabs.com/Documents/sumo-test/toronto/toronto-netedit.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/Users/joyce@intern.sidewalklabs.com/Documents/sumo-test/toronto/toronto-netedit.net.xml"/>
+        <plain-output-prefix value="/Users/joyce@intern.sidewalklabs.com/Documents/sumo-test/toronto/toronto-netedit"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="false"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="true"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<!--
+
+          B_NS_1         A_NS_1         A_NS_2         A_NS_3   B_D1
+            ||             ||             ||             ||      ||
+            ||             ||             ||             ||        ||
+T_EW_0 == B_NS_2 ======= T_EW_1 ======= T_EW_2 ======= T_EW_3 === T_EW_4
+            ||             ||             ||             ||          ||            
+            ||             ||             ||             ||            ||   
+          B_NS_3 ======= L_EW_1 ======= L_EW_2 ======= L_EW_3 ====== L_EW_4
+            ||             ||             ||             ||              ||
+            ||             ||             ||             ||                ||
+B_EW_0 == B_NS_4 ======= B_EW_1 ======= B_EW_2 ======= B_EW_3 ========== B_EW_4 == B_EW_out
+            ||             ||             ||             ||
+            ||             ||             ||             ||
+          B_NS_5         A_NS_1_X       A_NS_2_X       A_NS_3_X
+
+-->
+
+
+<edges version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <edge id="a1_ns_12" from="A_NS_1" to="T_EW_1" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian" width="6"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a1_ns_21" from="T_EW_1" to="A_NS_1" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian" width="6"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a1_ns_23" from="T_EW_1" to="L_EW_1" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian" width="3"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a1_ns_32" from="L_EW_1" to="T_EW_1" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a1_ns_34" from="L_EW_1" to="B_EW_1" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a1_ns_43" from="B_EW_1" to="L_EW_1" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a1_ns_45" from="B_EW_1" to="A_NS_1_X" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a1_ns_54" from="A_NS_1_X" to="B_EW_1" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+
+
+    <edge id="a2_ns_12" from="A_NS_2" to="T_EW_2" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a2_ns_21" from="T_EW_2" to="A_NS_2" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a2_ns_23" from="T_EW_2" to="L_EW_2" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a2_ns_32" from="L_EW_2" to="T_EW_2" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a2_ns_34" from="L_EW_2" to="B_EW_2" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a2_ns_43" from="B_EW_2" to="L_EW_2" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a2_ns_45" from="B_EW_2" to="A_NS_2_X" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a2_ns_54" from="A_NS_2_X" to="B_EW_2" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+
+
+    <edge id="a3_ns_12" from="A_NS_3" to="T_EW_3" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a3_ns_21" from="T_EW_3" to="A_NS_3" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a3_ns_23" from="T_EW_3" to="L_EW_3" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a3_ns_32" from="L_EW_3" to="T_EW_3" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a3_ns_34" from="L_EW_3" to="B_EW_3" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a3_ns_43" from="B_EW_3" to="L_EW_3" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a3_ns_45" from="B_EW_3" to="A_NS_3_X" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+    <edge id="a3_ns_54" from="A_NS_3_X" to="B_EW_3" priority="-1" type="accessway" numLanes="3" speed="6.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+    </edge>
+
+
+
+    <edge id="b_diag_12" from="B_D1" to="T_EW_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_diag_21" from="T_EW_4" to="B_D1" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_diag_23" from="T_EW_4" to="L_EW_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_diag_32" from="L_EW_4" to="T_EW_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_diag_34" from="L_EW_4" to="B_EW_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_diag_43" from="B_EW_4" to="L_EW_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_0b" from="B_EW_0" to="B_NS_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_12" from="B_EW_1" to="B_EW_2" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_1b" from="B_EW_1" to="B_NS_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_21" from="B_EW_2" to="B_EW_1" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_23" from="B_EW_2" to="B_EW_3" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_32" from="B_EW_3" to="B_EW_2" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_34" from="B_EW_3" to="B_EW_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_43" from="B_EW_4" to="B_EW_3" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_4out" from="B_EW_4" to="B_EW_out" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_b0" from="B_NS_4" to="B_EW_0" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_b1" from="B_NS_4" to="B_EW_1" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ew_out4" from="B_EW_out" to="B_EW_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ns_12" from="B_NS_1" to="B_NS_2" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ns_21" from="B_NS_2" to="B_NS_1" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ns_23" from="B_NS_2" to="B_NS_3" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ns_32" from="B_NS_3" to="B_NS_2" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ns_34" from="B_NS_3" to="B_NS_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ns_43" from="B_NS_4" to="B_NS_3" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ns_45" from="B_NS_4" to="B_NS_5" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="b_ns_54" from="B_NS_5" to="B_NS_4" priority="-1" type="boulevard" numLanes="5" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" allow="bicycle"/>
+        <lane index="2" disallow="tram bicycle pedestrian"/>
+        <lane index="3" disallow="tram bicycle pedestrian"/>
+        <lane index="4" allow="tram"/>
+    </edge>
+    <edge id="l_ew_01" from="B_NS_3" to="L_EW_1" priority="-1" type="laneway" numLanes="1" speed="2.25" shape="55.00,258.17 202.73,257.75 243.00,236.00" allow="pedestrian"/>
+    <edge id="l_ew_10" from="L_EW_1" to="B_NS_3" priority="-1" type="laneway" numLanes="1" speed="2.25" shape="243.00,236.00 202.73,257.75 55.00,258.17" allow="pedestrian"/>
+    <edge id="l_ew_12" from="L_EW_1" to="L_EW_2" priority="-1" type="laneway" numLanes="1" speed="2.25" shape="243.00,236.00 355.00,236.00 384.00,223.00 466.00,223.00" allow="pedestrian"/>
+    <edge id="l_ew_21" from="L_EW_2" to="L_EW_1" priority="-1" type="laneway" numLanes="1" speed="2.25" shape="466.00,223.00 384.00,223.00 355.00,236.00 243.00,236.00" allow="pedestrian"/>
+    <edge id="l_ew_23" from="L_EW_2" to="L_EW_3" priority="-1" type="laneway" numLanes="1" speed="2.25" shape="466.00,223.00 533.00,223.00 570.00,200.00 675.00,200.00" allow="pedestrian"/>
+    <edge id="l_ew_32" from="L_EW_3" to="L_EW_2" priority="-1" type="laneway" numLanes="1" speed="2.25" shape="675.00,200.00 570.00,200.00 533.00,223.00 466.00,223.00" allow="pedestrian"/>
+    <edge id="l_ew_34" from="L_EW_3" to="L_EW_4" priority="-1" type="laneway" numLanes="1" speed="2.25" shape="675.00,200.00 696.29,200.00 721.00,230.00 774.15,230.00 791.24,223.00 923.00,223.00" allow="pedestrian"/>
+    <edge id="l_ew_43" from="L_EW_4" to="L_EW_3" priority="-1" type="laneway" numLanes="1" speed="2.25" shape="923.00,223.00 791.24,223.00 774.15,230.00 721.00,230.00 696.29,200.00 675.00,200.00" allow="pedestrian"/>
+    <edge id="t_ew_0b" from="T_EW_0" to="B_NS_2" priority="-1" type="transitway" numLanes="4" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+    <edge id="t_ew_12" from="T_EW_1" to="T_EW_2" priority="-1" type="transitway" numLanes="4" speed="11.15" shape="243.00,394.00 285.50,410.00 466.00,410.00">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+    <edge id="t_ew_1b" from="T_EW_1" to="B_NS_2" priority="-1" type="transitway" numLanes="4" speed="11.15" shape="243.00,394.00 200.00,377.00 55.00,376.70">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+    <edge id="t_ew_21" from="T_EW_2" to="T_EW_1" priority="-1" type="transitway" numLanes="4" speed="11.15" shape="466.00,410.00 285.50,410.00 243.00,394.00">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+    <edge id="t_ew_23" from="T_EW_2" to="T_EW_3" priority="-1" type="transitway" numLanes="4" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+    <edge id="t_ew_32" from="T_EW_3" to="T_EW_2" priority="-1" type="transitway" numLanes="4" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+    <edge id="t_ew_34" from="T_EW_3" to="T_EW_4" priority="-1" type="transitway" numLanes="4" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+    <edge id="t_ew_43" from="T_EW_4" to="T_EW_3" priority="-1" type="transitway" numLanes="4" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+    <edge id="t_ew_b0" from="B_NS_2" to="T_EW_0" priority="-1" type="transitway" numLanes="4" speed="11.15">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+    <edge id="t_ew_b1" from="B_NS_2" to="T_EW_1" priority="-1" type="transitway" numLanes="4" speed="11.15" shape="55.00,376.70 200.00,377.00 243.00,394.00">
+        <lane index="0" allow="pedestrian"/>
+        <lane index="1" disallow="tram bicycle pedestrian"/>
+        <lane index="2" allow="bicycle"/>
+        <lane index="3" allow="tram"/>
+    </edge>
+</edges>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="bau-inputs/bau.nod.xml"/>
+        <edge-files value="bau-inputs/bau.edg.xml"/>
+        <type-files value="bau-inputs/bau.typ.xml"/>
+    </input>
+
+    <output>
+        <output-file value="bau.net.xml"/>
+    </output>
+
+    <processing>
+        <no-turnarounds value="true"/>
+    </processing>
+
+    <pedestrians>
+        <crossings.guess value="true"/>
+    </pedestrians>
+
+</configuration>
