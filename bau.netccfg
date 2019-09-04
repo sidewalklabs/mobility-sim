@@ -6,6 +6,7 @@
         <node-files value="bau-inputs/bau.nod.xml"/>
         <edge-files value="bau-inputs/bau.edg.xml"/>
         <type-files value="bau-inputs/bau.typ.xml"/>
+        <connection-files value="bau-inputs/bau.con.xml"/>
     </input>
 
     <output>

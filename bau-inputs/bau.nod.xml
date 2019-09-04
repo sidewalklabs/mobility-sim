@@ -58,9 +58,9 @@ B_EW_0 == B_NS_4 ======= B_EW_1 ======= B_EW_2 ======= B_EW_3 ========== B_EW_4 
     <node id="A_NS_1" x="243.00" y="570.00" type="unregulated"/>
     <node id="A_NS_2" x="466.00" y="570.00" type="unregulated"/>
     <node id="A_NS_3" x="675.00" y="570.00" type="unregulated"/>
-    <node id="A_NS_1_X" x="243.00" y="-20.00" type="unregulated"/>
-    <node id="A_NS_2_X" x="466.00" y="-20.00" type="unregulated"/>
-    <node id="A_NS_3_X" x="675.00" y="-20.00" type="unregulated"/>
+    <node id="A_NS_1_X" x="243.00" y="-30.00" type="unregulated"/>
+    <node id="A_NS_2_X" x="466.00" y="-30.00" type="unregulated"/>
+    <node id="A_NS_3_X" x="675.00" y="-30.00" type="unregulated"/>
 
     <node id="B_D1" x="828.00" y="570.00" type="unregulated"/>
     <node id="B_EW_0" x="0.00" y="65.00" type="unregulated"/>
@@ -73,7 +73,7 @@ B_EW_0 == B_NS_4 ======= B_EW_1 ======= B_EW_2 ======= B_EW_3 ========== B_EW_4 
     <node id="B_NS_2" x="55.00" y="376.70" type="traffic_light" tl="B_NS_2"/>
     <node id="B_NS_3" x="55.00" y="278.17" type="traffic_light" tl="B_NS_3"/>
     <node id="B_NS_4" x="55.00" y="65.00" type="traffic_light" tl="B_NS_4"/>
-    <node id="B_NS_5" x="55.00" y="-20.00" type="unregulated"/>
+    <node id="B_NS_5" x="55.00" y="-30.00" type="unregulated"/>
     <node id="L_EW_1" x="243.00" y="236.00" type="unregulated"/>
     <node id="L_EW_2" x="466.00" y="220.00" type="unregulated"/>
     <node id="L_EW_3" x="675.00" y="205.00" type="unregulated"/>

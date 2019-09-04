@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on Mon Aug 26 17:53:04 2019 by Eclipse SUMO netconvert Version 1.2.0
+<!-- generated on Wed Aug 28 11:55:44 2019 by Eclipse SUMO netconvert Version 1.2.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
         <node-files value="bau-inputs/bau.nod.xml"/>
         <edge-files value="bau-inputs/bau.edg.xml"/>
+        <connection-files value="bau-inputs/bau.con.xml"/>
         <type-files value="bau-inputs/bau.typ.xml"/>
     </input>
 
@@ -329,61 +330,111 @@
         <lane id=":B_EW_4_1_1" index="1" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="982.88,92.50 943.56,92.50"/>
         <lane id=":B_EW_4_1_2" index="2" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="982.88,87.50 943.56,87.50"/>
     </edge>
-    <edge id=":B_EW_4_12" function="internal">
-        <lane id=":B_EW_4_12_0" index="0" disallow="tram bicycle pedestrian" speed="10.16" length="4.00" width="5.00" shape="974.69,108.11 973.42,111.91"/>
-    </edge>
     <edge id=":B_EW_4_4" function="internal">
-        <lane id=":B_EW_4_4_0" index="0" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="943.56,72.50 982.88,72.50"/>
-        <lane id=":B_EW_4_4_1" index="1" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="943.56,77.50 982.88,77.50"/>
-        <lane id=":B_EW_4_4_2" index="2" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="943.56,82.50 982.88,82.50"/>
+        <lane id=":B_EW_4_4_0" index="0" disallow="tram bicycle pedestrian" speed="4.05" length="2.50" width="5.00" shape="982.88,87.50 982.88,85.00"/>
     </edge>
-    <edge id=":B_EW_4_7" function="internal">
-        <lane id=":B_EW_4_7_0" index="0" disallow="tram bicycle pedestrian" speed="12.96" length="15.57" width="5.00" shape="943.56,82.50 957.08,84.06 958.80,85.00"/>
+    <edge id=":B_EW_4_18" function="internal">
+        <lane id=":B_EW_4_18_0" index="0" disallow="tram bicycle pedestrian" speed="10.16" length="4.00" width="5.00" shape="974.69,108.11 973.42,111.91"/>
     </edge>
-    <edge id=":B_EW_4_8" function="internal">
-        <lane id=":B_EW_4_8_0" index="0" disallow="tram bicycle pedestrian" speed="12.26" length="13.34" width="5.00" shape="943.56,82.50 955.28,84.15 956.52,85.00"/>
+    <edge id=":B_EW_4_19" function="internal">
+        <lane id=":B_EW_4_19_0" index="0" disallow="tram bicycle pedestrian" speed="4.05" length="2.50" width="5.00" shape="982.88,85.00 982.88,82.50"/>
     </edge>
-    <edge id=":B_EW_4_13" function="internal">
-        <lane id=":B_EW_4_13_0" index="0" disallow="tram bicycle pedestrian" speed="12.96" length="30.78" width="5.00" shape="958.80,85.00 966.04,88.99 970.01,97.69 968.60,110.56"/>
+    <edge id=":B_EW_4_5" function="internal">
+        <lane id=":B_EW_4_5_0" index="0" disallow="tram bicycle pedestrian" speed="10.87" length="16.90" width="5.00" shape="982.88,97.50 978.01,98.32 974.01,100.76 970.87,104.85 970.09,106.82"/>
     </edge>
-    <edge id=":B_EW_4_14" function="internal">
-        <lane id=":B_EW_4_14_0" index="0" disallow="tram bicycle pedestrian" speed="12.26" length="27.95" width="5.00" shape="956.52,85.00 962.54,89.13 965.37,97.47 963.79,109.20"/>
+    <edge id=":B_EW_4_6" function="internal">
+        <lane id=":B_EW_4_6_0" index="0" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="982.88,97.50 943.56,97.50"/>
+        <lane id=":B_EW_4_6_1" index="1" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="982.88,92.50 943.56,92.50"/>
+        <lane id=":B_EW_4_6_2" index="2" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="982.88,87.50 943.56,87.50"/>
     </edge>
     <edge id=":B_EW_4_9" function="internal">
-        <lane id=":B_EW_4_9_0" index="0" disallow="tram bicycle pedestrian" speed="6.92" length="7.62" width="5.00" shape="949.35,105.14 949.79,101.80 948.98,99.41 947.56,98.43"/>
+        <lane id=":B_EW_4_9_0" index="0" disallow="tram bicycle pedestrian" speed="5.96" length="7.50" width="5.00" shape="982.88,87.50 982.88,80.00"/>
+    </edge>
+    <edge id=":B_EW_4_20" function="internal">
+        <lane id=":B_EW_4_20_0" index="0" disallow="tram bicycle pedestrian" speed="10.87" length="4.02" width="5.00" shape="970.09,106.82 968.60,110.56"/>
+    </edge>
+    <edge id=":B_EW_4_21" function="internal">
+        <lane id=":B_EW_4_21_0" index="0" disallow="tram bicycle pedestrian" speed="5.96" length="7.50" width="5.00" shape="982.88,80.00 982.88,72.50"/>
     </edge>
     <edge id=":B_EW_4_10" function="internal">
-        <lane id=":B_EW_4_10_0" index="0" disallow="tram bicycle pedestrian" speed="15.51" length="39.92" width="5.00" shape="954.16,106.50 959.02,93.81 965.42,84.75 973.37,79.31 978.88,78.26"/>
+        <lane id=":B_EW_4_10_0" index="0" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="943.56,72.50 982.88,72.50"/>
+        <lane id=":B_EW_4_10_1" index="1" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="943.56,77.50 982.88,77.50"/>
+        <lane id=":B_EW_4_10_2" index="2" disallow="tram bicycle pedestrian" speed="17.80" length="39.32" width="5.00" shape="943.56,82.50 982.88,82.50"/>
     </edge>
-    <edge id=":B_EW_4_11" function="internal">
-        <lane id=":B_EW_4_11_0" index="0" disallow="tram bicycle pedestrian" speed="14.36" length="33.40" width="5.00" shape="958.98,107.85 963.14,96.76 968.52,88.84 975.09,84.08 978.88,83.31"/>
+    <edge id=":B_EW_4_13" function="internal">
+        <lane id=":B_EW_4_13_0" index="0" disallow="tram bicycle pedestrian" speed="17.80" length="40.96" width="5.00" shape="943.56,82.50 955.33,80.94 963.22,77.50 971.11,74.06 982.88,72.50"/>
+    </edge>
+    <edge id=":B_EW_4_14" function="internal">
+        <lane id=":B_EW_4_14_0" index="0" disallow="tram bicycle pedestrian" speed="12.26" length="13.34" width="5.00" shape="943.56,82.50 955.28,84.15 956.52,85.00"/>
+    </edge>
+    <edge id=":B_EW_4_22" function="internal">
+        <lane id=":B_EW_4_22_0" index="0" disallow="tram bicycle pedestrian" speed="12.26" length="27.95" width="5.00" shape="956.52,85.00 962.54,89.13 965.37,97.47 963.79,109.20"/>
     </edge>
     <edge id=":B_EW_4_15" function="internal">
-        <lane id=":B_EW_4_15_0" index="0" disallow="tram bicycle pedestrian" speed="6.92" length="4.18" width="5.00" shape="947.56,98.43 946.90,97.98 943.56,97.50"/>
+        <lane id=":B_EW_4_15_0" index="0" disallow="tram bicycle pedestrian" speed="6.92" length="7.62" width="5.00" shape="949.35,105.14 949.79,101.80 948.98,99.41 947.56,98.43"/>
     </edge>
     <edge id=":B_EW_4_16" function="internal">
-        <lane id=":B_EW_4_16_0" index="0" disallow="tram bicycle pedestrian" speed="15.51" length="4.07" width="5.00" shape="978.88,78.26 982.88,77.50"/>
+        <lane id=":B_EW_4_16_0" index="0" disallow="tram bicycle pedestrian" speed="14.91" length="36.49" width="5.00" shape="954.16,106.50 958.49,96.00 964.72,88.50 972.85,84.00 978.88,83.10"/>
     </edge>
     <edge id=":B_EW_4_17" function="internal">
-        <lane id=":B_EW_4_17_0" index="0" disallow="tram bicycle pedestrian" speed="14.36" length="4.08" width="5.00" shape="978.88,83.31 982.88,82.50"/>
+        <lane id=":B_EW_4_17_0" index="0" disallow="tram bicycle pedestrian" speed="15.02" length="37.00" width="5.00" shape="958.98,107.85 963.67,94.57 969.22,85.09 975.62,79.40 978.88,78.55"/>
     </edge>
-    <edge id=":B_EW_4_c0" function="crossing" crossingEdges="b_ew_4out b_ew_out4">
-        <lane id=":B_EW_4_c0_0" index="0" allow="pedestrian" speed="1.00" length="30.00" width="4.00" shape="980.88,70.00 980.88,100.00"/>
+    <edge id=":B_EW_4_23" function="internal">
+        <lane id=":B_EW_4_23_0" index="0" disallow="tram bicycle pedestrian" speed="6.92" length="4.18" width="5.00" shape="947.56,98.43 946.90,97.98 943.56,97.50"/>
     </edge>
-    <edge id=":B_EW_4_c1" function="crossing" crossingEdges="b_ew_43 b_ew_34">
-        <lane id=":B_EW_4_c1_0" index="0" allow="pedestrian" speed="1.00" length="30.00" width="4.00" shape="945.56,100.00 945.56,70.00"/>
+    <edge id=":B_EW_4_24" function="internal">
+        <lane id=":B_EW_4_24_0" index="0" disallow="tram bicycle pedestrian" speed="14.91" length="4.04" width="5.00" shape="978.88,83.10 982.88,82.50"/>
     </edge>
-    <edge id=":B_EW_4_c2" function="crossing" crossingEdges="b_diag_43 b_diag_34">
-        <lane id=":B_EW_4_c2_0" index="0" allow="pedestrian" speed="1.00" length="30.00" width="4.00" shape="976.36,110.66 947.48,102.54"/>
+    <edge id=":B_EW_4_25" function="internal">
+        <lane id=":B_EW_4_25_0" index="0" disallow="tram bicycle pedestrian" speed="15.02" length="4.13" width="5.00" shape="978.88,78.55 982.88,77.50"/>
+    </edge>
+    <edge id=":B_EW_4_c0" function="crossing" crossingEdges="b_diag_54">
+        <lane id=":B_EW_4_c0_0" index="0" allow="pedestrian" speed="1.00" length="15.00" width="4.00" shape="980.88,85.00 980.88,100.00"/>
+    </edge>
+    <edge id=":B_EW_4_c1" function="crossing" crossingEdges="b_diag_45 b_ew_out4">
+        <lane id=":B_EW_4_c1_0" index="0" allow="pedestrian" speed="1.00" length="30.00" width="4.00" shape="980.88,70.00 980.88,100.00"/>
+    </edge>
+    <edge id=":B_EW_4_c2" function="crossing" crossingEdges="b_ew_4out">
+        <lane id=":B_EW_4_c2_0" index="0" allow="pedestrian" speed="1.00" length="15.00" width="4.00" shape="980.88,70.00 980.88,85.00"/>
+    </edge>
+    <edge id=":B_EW_4_c3" function="crossing" crossingEdges="b_ew_43 b_ew_34">
+        <lane id=":B_EW_4_c3_0" index="0" allow="pedestrian" speed="1.00" length="30.00" width="4.00" shape="945.56,100.00 945.56,70.00"/>
+    </edge>
+    <edge id=":B_EW_4_c4" function="crossing" crossingEdges="b_diag_43 b_diag_34">
+        <lane id=":B_EW_4_c4_0" index="0" allow="pedestrian" speed="1.00" length="30.00" width="4.00" shape="976.36,110.66 947.48,102.54"/>
     </edge>
     <edge id=":B_EW_4_w0" function="walkingarea">
         <lane id=":B_EW_4_w0_0" index="0" allow="pedestrian" speed="1.00" length="9.09" width="4.00" shape="975.82,112.59 977.75,113.13 982.88,102.00 982.88,100.00 981.71,100.35 980.53,101.40 979.36,103.15 978.18,105.60 977.00,108.74"/>
     </edge>
     <edge id=":B_EW_4_w1" function="walkingarea">
-        <lane id=":B_EW_4_w1_0" index="0" allow="pedestrian" speed="1.00" length="25.63" width="4.00" shape="978.88,70.00 982.88,70.00 982.88,68.00 943.56,68.00 943.56,70.00 947.56,70.00"/>
+        <lane id=":B_EW_4_w1_0" index="0" allow="pedestrian" speed="1.00" length="11.12" width="4.00" shape="978.88,85.00 982.88,85.00 982.88,102.00 982.88,100.00 978.88,100.00"/>
     </edge>
     <edge id=":B_EW_4_w2" function="walkingarea">
-        <lane id=":B_EW_4_w2_0" index="0" allow="pedestrian" speed="1.00" length="3.35" width="4.00" shape="943.56,100.00 943.56,102.00 945.02,103.93 946.94,104.47 947.20,103.10 947.13,101.99 946.73,101.12 946.00,100.50 944.94,100.12"/>
+        <lane id=":B_EW_4_w2_0" index="0" allow="pedestrian" speed="1.00" length="11.12" width="4.00" shape="978.88,70.00 982.88,70.00 982.88,68.00 982.88,85.00 978.88,85.00"/>
+    </edge>
+    <edge id=":B_EW_4_w3" function="walkingarea">
+        <lane id=":B_EW_4_w3_0" index="0" allow="pedestrian" speed="1.00" length="25.63" width="4.00" shape="978.88,70.00 982.88,70.00 982.88,68.00 943.56,68.00 943.56,70.00 947.56,70.00"/>
+    </edge>
+    <edge id=":B_EW_4_w4" function="walkingarea">
+        <lane id=":B_EW_4_w4_0" index="0" allow="pedestrian" speed="1.00" length="3.35" width="4.00" shape="943.56,100.00 943.56,102.00 945.02,103.93 946.94,104.47 947.20,103.10 947.13,101.99 946.73,101.12 946.00,100.50 944.94,100.12"/>
+    </edge>
+    <edge id=":B_EW_out_0" function="internal">
+        <lane id=":B_EW_out_0_0" index="0" disallow="tram bicycle pedestrian" speed="7.39" length="25.00" width="5.00" shape="1000.00,72.50 1000.00,97.50"/>
+    </edge>
+    <edge id=":B_EW_out_1" function="internal">
+        <lane id=":B_EW_out_1_0" index="0" disallow="tram bicycle pedestrian" speed="5.96" length="15.00" width="5.00" shape="1000.00,77.50 1000.00,92.50"/>
+    </edge>
+    <edge id=":B_EW_out_2" function="internal">
+        <lane id=":B_EW_out_2_0" index="0" disallow="tram bicycle pedestrian" speed="4.05" length="5.00" width="5.00" shape="1000.00,82.50 1000.00,87.50"/>
+    </edge>
+    <edge id=":B_EW_out_3" function="internal">
+        <lane id=":B_EW_out_3_0" index="0" disallow="tram bicycle pedestrian" speed="7.39" length="25.00" width="5.00" shape="1000.00,72.50 1000.00,97.50"/>
+    </edge>
+    <edge id=":B_EW_out_4" function="internal">
+        <lane id=":B_EW_out_4_0" index="0" disallow="tram bicycle pedestrian" speed="5.96" length="15.00" width="5.00" shape="1000.00,77.50 1000.00,92.50"/>
+    </edge>
+    <edge id=":B_EW_out_5" function="internal">
+        <lane id=":B_EW_out_5_0" index="0" disallow="tram bicycle pedestrian" speed="4.05" length="5.00" width="5.00" shape="1000.00,82.50 1000.00,87.50"/>
     </edge>
     <edge id=":B_EW_out_w0" function="walkingarea">
         <lane id=":B_EW_out_w0_0" index="0" allow="pedestrian" speed="1.00" length="32.00" width="2.00" shape="1000.00,100.00 1000.00,102.00 1000.00,68.00 1000.00,70.00"/>
@@ -1213,6 +1264,18 @@
         <lane id="b_diag_43_2" index="2" disallow="tram bicycle pedestrian" speed="17.80" length="137.78" width="5.00" shape="968.60,110.56 931.30,243.19"/>
         <lane id="b_diag_43_3" index="3" disallow="tram bicycle pedestrian" speed="17.80" length="137.78" width="5.00" shape="963.79,109.20 926.49,241.84"/>
     </edge>
+    <edge id="b_diag_45" from="B_EW_4" to="B_EW_out" priority="-1" type="major_arterial">
+        <lane id="b_diag_45_0" index="0" allow="pedestrian" speed="17.80" length="17.12" width="2.00" shape="982.88,69.00 1000.00,69.00"/>
+        <lane id="b_diag_45_1" index="1" disallow="tram bicycle pedestrian" speed="17.80" length="17.12" width="5.00" shape="982.88,72.50 1000.00,72.50"/>
+        <lane id="b_diag_45_2" index="2" disallow="tram bicycle pedestrian" speed="17.80" length="17.12" width="5.00" shape="982.88,77.50 1000.00,77.50"/>
+        <lane id="b_diag_45_3" index="3" disallow="tram bicycle pedestrian" speed="17.80" length="17.12" width="5.00" shape="982.88,82.50 1000.00,82.50"/>
+    </edge>
+    <edge id="b_diag_54" from="B_EW_out" to="B_EW_4" priority="-1" type="major_arterial">
+        <lane id="b_diag_54_0" index="0" allow="pedestrian" speed="17.80" length="17.12" width="2.00" shape="1000.00,101.00 982.88,101.00"/>
+        <lane id="b_diag_54_1" index="1" disallow="tram bicycle pedestrian" speed="17.80" length="17.12" width="5.00" shape="1000.00,97.50 982.88,97.50"/>
+        <lane id="b_diag_54_2" index="2" disallow="tram bicycle pedestrian" speed="17.80" length="17.12" width="5.00" shape="1000.00,92.50 982.88,92.50"/>
+        <lane id="b_diag_54_3" index="3" disallow="tram bicycle pedestrian" speed="17.80" length="17.12" width="5.00" shape="1000.00,87.50 982.88,87.50"/>
+    </edge>
     <edge id="b_ew_0b" from="B_EW_0" to="B_NS_4" priority="-1" type="major_arterial">
         <lane id="b_ew_0b_0" index="0" allow="pedestrian" speed="17.80" length="36.00" width="2.00" shape="0.00,69.00 36.00,69.00"/>
         <lane id="b_ew_0b_1" index="1" disallow="tram bicycle pedestrian" speed="17.80" length="36.00" width="5.00" shape="0.00,72.50 36.00,72.50"/>
@@ -1429,12 +1492,15 @@
         <phase duration="4"  state="yyyrrrrryyyrrrrrrrrr"/>
     </tlLogic>
     <tlLogic id="B_EW_4" type="static" programID="0" offset="0">
-        <phase duration="36" state="gGGGGGGggrrrrrG"/>
-        <phase duration="5"  state="gGGGGGGggrrrrrr"/>
-        <phase duration="4"  state="yyyyyyyyyrrrrrr"/>
-        <phase duration="36" state="rrrrrrrrrgggGGr"/>
-        <phase duration="5"  state="rrrrrrrrrgggrrr"/>
-        <phase duration="4"  state="rrrrrrrrryyyrrr"/>
+        <phase duration="21" state="gGGGgrrrrrGGGGgrrrrrrrG"/>
+        <phase duration="5"  state="gGGGgrrrrrGGGGgrrrrrrrr"/>
+        <phase duration="4"  state="yyyyyrrrrryyyyyrrrrrrrr"/>
+        <phase duration="21" state="rrrrrGGGGGrrrrrrrrGrGrr"/>
+        <phase duration="5"  state="rrrrrGGGGGrrrrrrrrrrrrr"/>
+        <phase duration="4"  state="rrrrryyyyyrrrrrrrrrrrrr"/>
+        <phase duration="21" state="rrrrrrrrrrrrrrrggGGGrGr"/>
+        <phase duration="5"  state="rrrrrrrrrrrrrrrggGrrrrr"/>
+        <phase duration="4"  state="rrrrrrrrrrrrrrryyyrrrrr"/>
     </tlLogic>
     <tlLogic id="B_NS_2" type="static" programID="0" offset="0">
         <phase duration="36" state="gGGGgrrrrgGGGgrrrrrGrG"/>
@@ -1558,24 +1624,32 @@
         <request index="18" response="00000000000000000000" foes="00000000111110000010" cont="0"/>
         <request index="19" response="00000000000000000000" foes="00001111110001110001" cont="0"/>
     </junction>
-    <junction id="B_EW_4" type="traffic_light" x="968.00" y="85.00" incLanes="b_ew_out4_0 b_ew_out4_1 b_ew_out4_2 b_ew_out4_3 b_ew_34_0 b_ew_34_1 b_ew_34_2 b_ew_34_3 b_diag_34_0 b_diag_34_1 b_diag_34_2 b_diag_34_3 :B_EW_4_w1_0 :B_EW_4_w2_0 :B_EW_4_w0_0" intLanes=":B_EW_4_12_0 :B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_4_0 :B_EW_4_4_1 :B_EW_4_4_2 :B_EW_4_13_0 :B_EW_4_14_0 :B_EW_4_15_0 :B_EW_4_16_0 :B_EW_4_17_0 :B_EW_4_c0_0 :B_EW_4_c1_0 :B_EW_4_c2_0" shape="982.88,102.00 982.88,68.00 943.56,68.00 943.56,102.00 944.61,102.21 944.92,102.48 945.10,102.86 945.13,103.34 945.02,103.93 977.75,113.13 978.76,109.73 979.71,106.95 980.60,104.78 981.42,103.24 982.18,102.31">
-        <request index="0"  response="101000000000000" foes="101000000000000" cont="1"/>
-        <request index="1"  response="011111000000000" foes="011111110000000" cont="0"/>
-        <request index="2"  response="011111000000000" foes="011111110000000" cont="0"/>
-        <request index="3"  response="011111000000000" foes="011111110000000" cont="0"/>
-        <request index="4"  response="011110000000000" foes="011110000000000" cont="0"/>
-        <request index="5"  response="011110000000000" foes="011110000000000" cont="0"/>
-        <request index="6"  response="011110000000000" foes="011110000000000" cont="0"/>
-        <request index="7"  response="110110000001110" foes="110110000001110" cont="1"/>
-        <request index="8"  response="110110000001110" foes="110110000001110" cont="1"/>
-        <request index="9"  response="110000000001110" foes="110000000001110" cont="1"/>
-        <request index="10" response="101000111111110" foes="101000111111110" cont="1"/>
-        <request index="11" response="101000111111110" foes="101000111111110" cont="1"/>
-        <request index="12" response="000000000000000" foes="000110001111111" cont="0"/>
-        <request index="13" response="000000000000000" foes="000001111111110" cont="0"/>
-        <request index="14" response="000000000000000" foes="000111110000001" cont="0"/>
+    <junction id="B_EW_4" type="traffic_light" x="968.00" y="85.00" incLanes="b_diag_54_0 b_diag_54_1 b_diag_54_2 b_diag_54_3 b_ew_out4_0 b_ew_out4_1 b_ew_out4_2 b_ew_out4_3 b_ew_34_0 b_ew_34_1 b_ew_34_2 b_ew_34_3 b_diag_34_0 b_diag_34_1 b_diag_34_2 b_diag_34_3 :B_EW_4_w1_0 :B_EW_4_w2_0 :B_EW_4_w3_0 :B_EW_4_w4_0 :B_EW_4_w0_0" intLanes=":B_EW_4_18_0 :B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_19_0 :B_EW_4_20_0 :B_EW_4_6_0 :B_EW_4_6_1 :B_EW_4_6_2 :B_EW_4_21_0 :B_EW_4_10_0 :B_EW_4_10_1 :B_EW_4_10_2 :B_EW_4_13_0 :B_EW_4_22_0 :B_EW_4_23_0 :B_EW_4_24_0 :B_EW_4_25_0 :B_EW_4_c0_0 :B_EW_4_c1_0 :B_EW_4_c2_0 :B_EW_4_c3_0 :B_EW_4_c4_0" shape="982.88,102.00 982.88,68.00 943.56,68.00 943.56,102.00 944.61,102.21 944.92,102.48 945.10,102.86 945.13,103.34 945.02,103.93 977.75,113.13 978.76,109.73 979.71,106.95 980.60,104.78 981.42,103.24 982.18,102.31">
+        <request index="0"  response="10001000000000000000000" foes="10001000000000000000000" cont="1"/>
+        <request index="1"  response="01001111000000000100000" foes="01001111100000111100000" cont="0"/>
+        <request index="2"  response="01001111000000000100000" foes="01001111100000111100000" cont="0"/>
+        <request index="3"  response="01001111000000000100000" foes="01001111100000111100000" cont="0"/>
+        <request index="4"  response="00101010001110000100000" foes="00101010001110111100000" cont="1"/>
+        <request index="5"  response="10010010001110000011110" foes="10010010001111000011110" cont="1"/>
+        <request index="6"  response="01010101101110000011110" foes="01010101101111000011110" cont="0"/>
+        <request index="7"  response="01010101101110000011110" foes="01010101101111000011110" cont="0"/>
+        <request index="8"  response="01010101101110000011110" foes="01010101101110000011110" cont="0"/>
+        <request index="9"  response="00010010001110000000000" foes="00010110001110011100000" cont="1"/>
+        <request index="10" response="01010110000001000100000" foes="01010110010001111110000" cont="0"/>
+        <request index="11" response="01010110000001000100000" foes="01010110010001111110000" cont="0"/>
+        <request index="12" response="01010110000001000100000" foes="01010110000001111110000" cont="0"/>
+        <request index="13" response="01100000000000000000000" foes="01100000000110000000000" cont="0"/>
+        <request index="14" response="11000110000000000001110" foes="11000110000000111001110" cont="1"/>
+        <request index="15" response="11000000000000111001110" foes="11000000000000111001110" cont="1"/>
+        <request index="16" response="10010000101111000111110" foes="10010100101111000111110" cont="1"/>
+        <request index="17" response="10100000101111111001110" foes="10100010101111111001110" cont="1"/>
+        <request index="18" response="00000000000000000000000" foes="00000000000000000011111" cont="0"/>
+        <request index="19" response="00000000000000000000000" foes="00000010001111111100000" cont="0"/>
+        <request index="20" response="00000000000000000000000" foes="00000100010000000010000" cont="0"/>
+        <request index="21" response="00000000000000000000000" foes="00000001111110111001110" cont="0"/>
+        <request index="22" response="00000000000000000000000" foes="00000111100000000100001" cont="0"/>
     </junction>
-    <junction id="B_EW_out" type="unregulated" x="1000.00" y="85.00" incLanes="b_ew_4out_0 b_ew_4out_1 b_ew_4out_2 b_ew_4out_3" intLanes="" shape="1000.00,85.00 1000.00,68.00 1000.00,85.00"/>
+    <junction id="B_EW_out" type="unregulated" x="1000.00" y="85.00" incLanes="b_diag_45_0 b_diag_45_1 b_diag_45_2 b_diag_45_3 b_ew_4out_0 b_ew_4out_1 b_ew_4out_2 b_ew_4out_3" intLanes=":B_EW_out_0_0 :B_EW_out_1_0 :B_EW_out_2_0 :B_EW_out_3_0 :B_EW_out_4_0 :B_EW_out_5_0" shape="1000.00,68.00 1000.00,85.00 1000.00,102.00"/>
     <junction id="B_NS_1" type="unregulated" x="55.00" y="590.00" incLanes="b_ns_21_0 b_ns_21_1 b_ns_21_2 b_ns_21_3" intLanes="" shape="55.00,590.00 72.00,590.00 55.00,590.00"/>
     <junction id="B_NS_2" type="traffic_light" x="55.00" y="396.70" incLanes="b_ns_12_0 b_ns_12_1 b_ns_12_2 b_ns_12_3 t_ew_1b_0 t_ew_1b_1 t_ew_1b_2 b_ns_32_0 b_ns_32_1 b_ns_32_2 b_ns_32_3 t_ew_0b_0 t_ew_0b_1 t_ew_0b_2 :B_NS_2_w1_0 :B_NS_2_w2_0 :B_NS_2_w3_0 :B_NS_2_w0_0" intLanes=":B_NS_2_18_0 :B_NS_2_1_0 :B_NS_2_1_1 :B_NS_2_1_2 :B_NS_2_19_0 :B_NS_2_20_0 :B_NS_2_6_0 :B_NS_2_6_1 :B_NS_2_21_0 :B_NS_2_22_0 :B_NS_2_10_0 :B_NS_2_10_1 :B_NS_2_10_2 :B_NS_2_23_0 :B_NS_2_24_0 :B_NS_2_15_0 :B_NS_2_15_1 :B_NS_2_25_0 :B_NS_2_c0_0 :B_NS_2_c1_0 :B_NS_2_c2_0 :B_NS_2_c3_0" shape="38.00,410.74 72.00,410.74 72.22,409.62 72.50,409.24 72.89,408.96 73.39,408.79 74.00,408.74 74.05,384.74 72.91,384.49 72.51,384.17 72.23,383.73 72.06,383.17 72.00,382.48 38.00,382.48 37.78,383.59 37.50,383.98 37.11,384.25 36.61,384.41 36.00,384.46 35.69,408.46 36.98,408.72 37.42,409.04 37.74,409.48 37.94,410.05">
         <request index="0"  response="1001000000000000000000" foes="1001000000000011000000" cont="1"/>
@@ -1732,12 +1806,14 @@
     <junction id=":B_EW_3_21_0" type="internal" x="675.00" y="81.28" incLanes=":B_EW_3_10_0 a3_ns_34_1" intLanes=":B_EW_3_0_0 :B_EW_3_1_0 :B_EW_3_4_0 :B_EW_3_4_1 :B_EW_3_4_2 :B_EW_3_7_0 :B_EW_3_12_0 :B_EW_3_12_1 :B_EW_3_12_2 :B_EW_3_15_0 :B_EW_3_c2_0 :B_EW_3_c3_0"/>
     <junction id=":B_EW_3_22_0" type="internal" x="670.50" y="70.50" incLanes=":B_EW_3_11_0" intLanes=":B_EW_3_1_0 :B_EW_3_7_0 :B_EW_3_c2_0 :B_EW_3_c3_0"/>
     <junction id=":B_EW_3_23_0" type="internal" x="671.68" y="85.00" incLanes=":B_EW_3_15_0 b_ew_43_1 b_ew_43_2 b_ew_43_3" intLanes=":B_EW_3_1_0 :B_EW_3_2_0 :B_EW_3_3_0 :B_EW_3_4_0 :B_EW_3_4_1 :B_EW_3_4_2 :B_EW_3_9_0 :B_EW_3_10_0 :B_EW_3_c0_0 :B_EW_3_c3_0"/>
-    <junction id=":B_EW_4_12_0" type="internal" x="974.69" y="108.11" incLanes=":B_EW_4_0_0" intLanes=":B_EW_4_c0_0 :B_EW_4_c2_0"/>
-    <junction id=":B_EW_4_13_0" type="internal" x="958.80" y="85.00" incLanes=":B_EW_4_7_0 b_ew_out4_1 b_ew_out4_2 b_ew_out4_3" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_10_0 :B_EW_4_11_0 :B_EW_4_c1_0 :B_EW_4_c2_0"/>
-    <junction id=":B_EW_4_14_0" type="internal" x="956.52" y="85.00" incLanes=":B_EW_4_8_0 b_ew_out4_1 b_ew_out4_2 b_ew_out4_3" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_10_0 :B_EW_4_11_0 :B_EW_4_c1_0 :B_EW_4_c2_0"/>
-    <junction id=":B_EW_4_15_0" type="internal" x="947.56" y="98.43" incLanes=":B_EW_4_9_0" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_c1_0 :B_EW_4_c2_0"/>
-    <junction id=":B_EW_4_16_0" type="internal" x="978.88" y="78.26" incLanes=":B_EW_4_10_0" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_4_0 :B_EW_4_4_1 :B_EW_4_4_2 :B_EW_4_7_0 :B_EW_4_8_0 :B_EW_4_c0_0 :B_EW_4_c2_0"/>
-    <junction id=":B_EW_4_17_0" type="internal" x="978.88" y="83.31" incLanes=":B_EW_4_11_0" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_4_0 :B_EW_4_4_1 :B_EW_4_4_2 :B_EW_4_7_0 :B_EW_4_8_0 :B_EW_4_c0_0 :B_EW_4_c2_0"/>
+    <junction id=":B_EW_4_18_0" type="internal" x="974.69" y="108.11" incLanes=":B_EW_4_0_0" intLanes=":B_EW_4_c0_0 :B_EW_4_c4_0"/>
+    <junction id=":B_EW_4_19_0" type="internal" x="982.88" y="85.00" incLanes=":B_EW_4_4_0 b_ew_34_1 b_ew_34_2 b_ew_34_3" intLanes=":B_EW_4_5_0 :B_EW_4_6_0 :B_EW_4_6_1 :B_EW_4_6_2 :B_EW_4_10_0 :B_EW_4_10_1 :B_EW_4_10_2 :B_EW_4_16_0 :B_EW_4_c0_0 :B_EW_4_c2_0"/>
+    <junction id=":B_EW_4_20_0" type="internal" x="970.09" y="106.82" incLanes=":B_EW_4_5_0" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_4_0 :B_EW_4_10_0 :B_EW_4_10_1 :B_EW_4_10_2 :B_EW_4_16_0 :B_EW_4_c1_0 :B_EW_4_c4_0"/>
+    <junction id=":B_EW_4_21_0" type="internal" x="982.88" y="80.00" incLanes=":B_EW_4_9_0" intLanes=":B_EW_4_10_0 :B_EW_4_10_1 :B_EW_4_10_2 :B_EW_4_16_0 :B_EW_4_17_0 :B_EW_4_c1_0 :B_EW_4_c1_0"/>
+    <junction id=":B_EW_4_22_0" type="internal" x="956.52" y="85.00" incLanes=":B_EW_4_14_0 b_diag_54_1 b_diag_54_2 b_diag_54_3" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_6_0 :B_EW_4_6_1 :B_EW_4_6_2 :B_EW_4_16_0 :B_EW_4_17_0 :B_EW_4_c3_0 :B_EW_4_c4_0"/>
+    <junction id=":B_EW_4_23_0" type="internal" x="947.56" y="98.43" incLanes=":B_EW_4_15_0" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_6_0 :B_EW_4_6_1 :B_EW_4_6_2 :B_EW_4_c3_0 :B_EW_4_c4_0"/>
+    <junction id=":B_EW_4_24_0" type="internal" x="978.88" y="83.10" incLanes=":B_EW_4_16_0" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_4_0 :B_EW_4_5_0 :B_EW_4_9_0 :B_EW_4_10_0 :B_EW_4_10_1 :B_EW_4_10_2 :B_EW_4_14_0 :B_EW_4_c1_0 :B_EW_4_c4_0"/>
+    <junction id=":B_EW_4_25_0" type="internal" x="978.88" y="78.55" incLanes=":B_EW_4_17_0" intLanes=":B_EW_4_1_0 :B_EW_4_1_1 :B_EW_4_1_2 :B_EW_4_6_0 :B_EW_4_6_1 :B_EW_4_6_2 :B_EW_4_9_0 :B_EW_4_10_0 :B_EW_4_10_1 :B_EW_4_10_2 :B_EW_4_14_0 :B_EW_4_c2_0 :B_EW_4_c4_0"/>
     <junction id=":B_NS_2_18_0" type="internal" x="39.74" y="405.04" incLanes=":B_NS_2_0_0" intLanes=":B_NS_2_6_0 :B_NS_2_6_1 :B_NS_2_13_0 :B_NS_2_c0_0 :B_NS_2_c3_0"/>
     <junction id=":B_NS_2_19_0" type="internal" x="55.00" y="402.03" incLanes=":B_NS_2_4_0 b_ns_32_1 b_ns_32_2 b_ns_32_3" intLanes=":B_NS_2_6_0 :B_NS_2_6_1 :B_NS_2_8_0 :B_NS_2_9_0 :B_NS_2_10_0 :B_NS_2_10_1 :B_NS_2_10_2 :B_NS_2_15_0 :B_NS_2_15_1 :B_NS_2_17_0 :B_NS_2_c0_0 :B_NS_2_c1_0"/>
     <junction id=":B_NS_2_20_0" type="internal" x="68.60" y="406.74" incLanes=":B_NS_2_5_0" intLanes=":B_NS_2_10_0 :B_NS_2_10_1 :B_NS_2_10_2 :B_NS_2_17_0 :B_NS_2_c0_0 :B_NS_2_c1_0"/>
@@ -1840,12 +1916,20 @@
     <connection from="b_diag_32" to="b_diag_21" fromLane="2" toLane="2" via=":T_EW_4_0_1" dir="s" state="M"/>
     <connection from="b_diag_32" to="b_diag_21" fromLane="3" toLane="3" via=":T_EW_4_0_2" dir="s" state="M"/>
     <connection from="b_diag_32" to="t_ew_43" fromLane="3" toLane="2" via=":T_EW_4_3_0" dir="l" state="M"/>
-    <connection from="b_diag_34" to="b_ew_43" fromLane="1" toLane="1" via=":B_EW_4_9_0" tl="B_EW_4" linkIndex="9" dir="r" state="o"/>
-    <connection from="b_diag_34" to="b_ew_4out" fromLane="2" toLane="2" via=":B_EW_4_10_0" tl="B_EW_4" linkIndex="10" dir="l" state="o"/>
-    <connection from="b_diag_34" to="b_ew_4out" fromLane="3" toLane="3" via=":B_EW_4_11_0" tl="B_EW_4" linkIndex="11" dir="l" state="o"/>
+    <connection from="b_diag_34" to="b_ew_43" fromLane="1" toLane="1" via=":B_EW_4_15_0" tl="B_EW_4" linkIndex="15" dir="r" state="o"/>
+    <connection from="b_diag_34" to="b_diag_45" fromLane="2" toLane="3" via=":B_EW_4_16_0" tl="B_EW_4" linkIndex="16" dir="l" state="o"/>
+    <connection from="b_diag_34" to="b_ew_4out" fromLane="3" toLane="2" via=":B_EW_4_17_0" tl="B_EW_4" linkIndex="17" dir="L" state="o"/>
     <connection from="b_diag_43" to="b_diag_32" fromLane="1" toLane="1" via=":L_EW_4_0_0" dir="s" state="M"/>
     <connection from="b_diag_43" to="b_diag_32" fromLane="2" toLane="2" via=":L_EW_4_0_1" dir="s" state="M"/>
     <connection from="b_diag_43" to="b_diag_32" fromLane="3" toLane="3" via=":L_EW_4_0_2" dir="s" state="M"/>
+    <connection from="b_diag_45" to="b_ew_out4" fromLane="1" toLane="1" via=":B_EW_out_0_0" dir="l" state="M"/>
+    <connection from="b_diag_45" to="b_ew_out4" fromLane="2" toLane="2" via=":B_EW_out_1_0" dir="l" state="M"/>
+    <connection from="b_diag_45" to="b_ew_out4" fromLane="3" toLane="3" via=":B_EW_out_2_0" dir="l" state="M"/>
+    <connection from="b_diag_54" to="b_diag_43" fromLane="1" toLane="1" via=":B_EW_4_0_0" tl="B_EW_4" linkIndex="0" dir="r" state="o"/>
+    <connection from="b_diag_54" to="b_ew_43" fromLane="1" toLane="1" via=":B_EW_4_1_0" tl="B_EW_4" linkIndex="1" dir="s" state="o"/>
+    <connection from="b_diag_54" to="b_ew_43" fromLane="2" toLane="2" via=":B_EW_4_1_1" tl="B_EW_4" linkIndex="2" dir="s" state="o"/>
+    <connection from="b_diag_54" to="b_ew_43" fromLane="3" toLane="3" via=":B_EW_4_1_2" tl="B_EW_4" linkIndex="3" dir="s" state="o"/>
+    <connection from="b_diag_54" to="b_ew_4out" fromLane="3" toLane="3" via=":B_EW_4_4_0" tl="B_EW_4" linkIndex="4" dir="l" state="o"/>
     <connection from="b_ew_0b" to="b_ns_45" fromLane="1" toLane="1" via=":B_NS_4_15_0" tl="B_NS_4" linkIndex="15" dir="r" state="o"/>
     <connection from="b_ew_0b" to="b_ew_b1" fromLane="1" toLane="1" via=":B_NS_4_16_0" tl="B_NS_4" linkIndex="16" dir="s" state="o"/>
     <connection from="b_ew_0b" to="b_ew_b1" fromLane="2" toLane="2" via=":B_NS_4_16_1" tl="B_NS_4" linkIndex="17" dir="s" state="o"/>
@@ -1876,25 +1960,29 @@
     <connection from="b_ew_32" to="b_ew_21" fromLane="2" toLane="2" via=":B_EW_2_4_1" tl="B_EW_2" linkIndex="5" dir="s" state="o"/>
     <connection from="b_ew_32" to="b_ew_21" fromLane="3" toLane="3" via=":B_EW_2_4_2" tl="B_EW_2" linkIndex="6" dir="s" state="o"/>
     <connection from="b_ew_32" to="a2_ns_45" fromLane="3" toLane="1" via=":B_EW_2_7_0" tl="B_EW_2" linkIndex="7" dir="l" state="o"/>
-    <connection from="b_ew_34" to="b_ew_4out" fromLane="1" toLane="1" via=":B_EW_4_4_0" tl="B_EW_4" linkIndex="4" dir="s" state="o"/>
-    <connection from="b_ew_34" to="b_ew_4out" fromLane="2" toLane="2" via=":B_EW_4_4_1" tl="B_EW_4" linkIndex="5" dir="s" state="o"/>
-    <connection from="b_ew_34" to="b_ew_4out" fromLane="3" toLane="3" via=":B_EW_4_4_2" tl="B_EW_4" linkIndex="6" dir="s" state="o"/>
-    <connection from="b_ew_34" to="b_diag_43" fromLane="3" toLane="2" via=":B_EW_4_7_0" tl="B_EW_4" linkIndex="7" dir="l" state="o"/>
-    <connection from="b_ew_34" to="b_diag_43" fromLane="3" toLane="3" via=":B_EW_4_8_0" tl="B_EW_4" linkIndex="8" dir="l" state="o"/>
+    <connection from="b_ew_34" to="b_diag_45" fromLane="1" toLane="1" via=":B_EW_4_10_0" tl="B_EW_4" linkIndex="10" dir="s" state="o"/>
+    <connection from="b_ew_34" to="b_diag_45" fromLane="2" toLane="2" via=":B_EW_4_10_1" tl="B_EW_4" linkIndex="11" dir="s" state="o"/>
+    <connection from="b_ew_34" to="b_diag_45" fromLane="3" toLane="3" via=":B_EW_4_10_2" tl="B_EW_4" linkIndex="12" dir="s" state="o"/>
+    <connection from="b_ew_34" to="b_ew_4out" fromLane="3" toLane="1" via=":B_EW_4_13_0" tl="B_EW_4" linkIndex="13" dir="s" state="o"/>
+    <connection from="b_ew_34" to="b_diag_43" fromLane="3" toLane="3" via=":B_EW_4_14_0" tl="B_EW_4" linkIndex="14" dir="l" state="o"/>
     <connection from="b_ew_43" to="a3_ns_43" fromLane="1" toLane="1" via=":B_EW_3_3_0" tl="B_EW_3" linkIndex="3" dir="r" state="o"/>
     <connection from="b_ew_43" to="b_ew_32" fromLane="1" toLane="1" via=":B_EW_3_4_0" tl="B_EW_3" linkIndex="4" dir="s" state="o"/>
     <connection from="b_ew_43" to="b_ew_32" fromLane="2" toLane="2" via=":B_EW_3_4_1" tl="B_EW_3" linkIndex="5" dir="s" state="o"/>
     <connection from="b_ew_43" to="b_ew_32" fromLane="3" toLane="3" via=":B_EW_3_4_2" tl="B_EW_3" linkIndex="6" dir="s" state="o"/>
     <connection from="b_ew_43" to="a3_ns_45" fromLane="3" toLane="1" via=":B_EW_3_7_0" tl="B_EW_3" linkIndex="7" dir="l" state="o"/>
+    <connection from="b_ew_4out" to="b_diag_54" fromLane="1" toLane="1" via=":B_EW_out_3_0" dir="l" state="M"/>
+    <connection from="b_ew_4out" to="b_diag_54" fromLane="2" toLane="2" via=":B_EW_out_4_0" dir="l" state="M"/>
+    <connection from="b_ew_4out" to="b_diag_54" fromLane="3" toLane="3" via=":B_EW_out_5_0" dir="l" state="M"/>
     <connection from="b_ew_b1" to="a1_ns_45" fromLane="1" toLane="1" via=":B_EW_1_11_0" tl="B_EW_1" linkIndex="11" dir="r" state="o"/>
     <connection from="b_ew_b1" to="b_ew_12" fromLane="1" toLane="1" via=":B_EW_1_12_0" tl="B_EW_1" linkIndex="12" dir="s" state="o"/>
     <connection from="b_ew_b1" to="b_ew_12" fromLane="2" toLane="2" via=":B_EW_1_12_1" tl="B_EW_1" linkIndex="13" dir="s" state="o"/>
     <connection from="b_ew_b1" to="b_ew_12" fromLane="3" toLane="3" via=":B_EW_1_12_2" tl="B_EW_1" linkIndex="14" dir="s" state="o"/>
     <connection from="b_ew_b1" to="a1_ns_43" fromLane="3" toLane="1" via=":B_EW_1_15_0" tl="B_EW_1" linkIndex="15" dir="l" state="o"/>
-    <connection from="b_ew_out4" to="b_diag_43" fromLane="1" toLane="1" via=":B_EW_4_0_0" tl="B_EW_4" linkIndex="0" dir="r" state="o"/>
-    <connection from="b_ew_out4" to="b_ew_43" fromLane="1" toLane="1" via=":B_EW_4_1_0" tl="B_EW_4" linkIndex="1" dir="s" state="o"/>
-    <connection from="b_ew_out4" to="b_ew_43" fromLane="2" toLane="2" via=":B_EW_4_1_1" tl="B_EW_4" linkIndex="2" dir="s" state="o"/>
-    <connection from="b_ew_out4" to="b_ew_43" fromLane="3" toLane="3" via=":B_EW_4_1_2" tl="B_EW_4" linkIndex="3" dir="s" state="o"/>
+    <connection from="b_ew_out4" to="b_diag_43" fromLane="1" toLane="2" via=":B_EW_4_5_0" tl="B_EW_4" linkIndex="5" dir="R" state="o"/>
+    <connection from="b_ew_out4" to="b_ew_43" fromLane="1" toLane="1" via=":B_EW_4_6_0" tl="B_EW_4" linkIndex="6" dir="s" state="o"/>
+    <connection from="b_ew_out4" to="b_ew_43" fromLane="2" toLane="2" via=":B_EW_4_6_1" tl="B_EW_4" linkIndex="7" dir="s" state="o"/>
+    <connection from="b_ew_out4" to="b_ew_43" fromLane="3" toLane="3" via=":B_EW_4_6_2" tl="B_EW_4" linkIndex="8" dir="s" state="o"/>
+    <connection from="b_ew_out4" to="b_diag_45" fromLane="3" toLane="1" via=":B_EW_4_9_0" tl="B_EW_4" linkIndex="9" dir="L" state="o"/>
     <connection from="b_ns_12" to="t_ew_b0" fromLane="1" toLane="1" via=":B_NS_2_0_0" tl="B_NS_2" linkIndex="0" dir="r" state="o"/>
     <connection from="b_ns_12" to="b_ns_23" fromLane="1" toLane="1" via=":B_NS_2_1_0" tl="B_NS_2" linkIndex="1" dir="s" state="o"/>
     <connection from="b_ns_12" to="b_ns_23" fromLane="2" toLane="2" via=":B_NS_2_1_1" tl="B_NS_2" linkIndex="2" dir="s" state="o"/>
@@ -2044,24 +2132,38 @@
     <connection from=":B_EW_3_12" to="b_ew_34" fromLane="2" toLane="3" dir="s" state="M"/>
     <connection from=":B_EW_3_15" to="a3_ns_43" fromLane="0" toLane="1" via=":B_EW_3_23_0" dir="l" state="m"/>
     <connection from=":B_EW_3_23" to="a3_ns_43" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":B_EW_4_0" to="b_diag_43" fromLane="0" toLane="1" via=":B_EW_4_12_0" dir="r" state="m"/>
-    <connection from=":B_EW_4_12" to="b_diag_43" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from=":B_EW_4_0" to="b_diag_43" fromLane="0" toLane="1" via=":B_EW_4_18_0" dir="r" state="m"/>
+    <connection from=":B_EW_4_18" to="b_diag_43" fromLane="0" toLane="1" dir="r" state="M"/>
     <connection from=":B_EW_4_1" to="b_ew_43" fromLane="0" toLane="1" dir="s" state="M"/>
     <connection from=":B_EW_4_1" to="b_ew_43" fromLane="1" toLane="2" dir="s" state="M"/>
     <connection from=":B_EW_4_1" to="b_ew_43" fromLane="2" toLane="3" dir="s" state="M"/>
-    <connection from=":B_EW_4_4" to="b_ew_4out" fromLane="0" toLane="1" dir="s" state="M"/>
-    <connection from=":B_EW_4_4" to="b_ew_4out" fromLane="1" toLane="2" dir="s" state="M"/>
-    <connection from=":B_EW_4_4" to="b_ew_4out" fromLane="2" toLane="3" dir="s" state="M"/>
-    <connection from=":B_EW_4_7" to="b_diag_43" fromLane="0" toLane="2" via=":B_EW_4_13_0" dir="l" state="m"/>
-    <connection from=":B_EW_4_13" to="b_diag_43" fromLane="0" toLane="2" dir="l" state="M"/>
-    <connection from=":B_EW_4_8" to="b_diag_43" fromLane="0" toLane="3" via=":B_EW_4_14_0" dir="l" state="m"/>
-    <connection from=":B_EW_4_14" to="b_diag_43" fromLane="0" toLane="3" dir="l" state="M"/>
-    <connection from=":B_EW_4_9" to="b_ew_43" fromLane="0" toLane="1" via=":B_EW_4_15_0" dir="r" state="m"/>
-    <connection from=":B_EW_4_15" to="b_ew_43" fromLane="0" toLane="1" dir="r" state="M"/>
-    <connection from=":B_EW_4_10" to="b_ew_4out" fromLane="0" toLane="2" via=":B_EW_4_16_0" dir="l" state="m"/>
-    <connection from=":B_EW_4_16" to="b_ew_4out" fromLane="0" toLane="2" dir="l" state="M"/>
-    <connection from=":B_EW_4_11" to="b_ew_4out" fromLane="0" toLane="3" via=":B_EW_4_17_0" dir="l" state="m"/>
-    <connection from=":B_EW_4_17" to="b_ew_4out" fromLane="0" toLane="3" dir="l" state="M"/>
+    <connection from=":B_EW_4_4" to="b_ew_4out" fromLane="0" toLane="3" via=":B_EW_4_19_0" dir="l" state="m"/>
+    <connection from=":B_EW_4_19" to="b_ew_4out" fromLane="0" toLane="3" dir="l" state="M"/>
+    <connection from=":B_EW_4_5" to="b_diag_43" fromLane="0" toLane="2" via=":B_EW_4_20_0" dir="R" state="m"/>
+    <connection from=":B_EW_4_20" to="b_diag_43" fromLane="0" toLane="2" dir="R" state="M"/>
+    <connection from=":B_EW_4_6" to="b_ew_43" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":B_EW_4_6" to="b_ew_43" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":B_EW_4_6" to="b_ew_43" fromLane="2" toLane="3" dir="s" state="M"/>
+    <connection from=":B_EW_4_9" to="b_diag_45" fromLane="0" toLane="1" via=":B_EW_4_21_0" dir="L" state="m"/>
+    <connection from=":B_EW_4_21" to="b_diag_45" fromLane="0" toLane="1" dir="L" state="M"/>
+    <connection from=":B_EW_4_10" to="b_diag_45" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":B_EW_4_10" to="b_diag_45" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":B_EW_4_10" to="b_diag_45" fromLane="2" toLane="3" dir="s" state="M"/>
+    <connection from=":B_EW_4_13" to="b_ew_4out" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":B_EW_4_14" to="b_diag_43" fromLane="0" toLane="3" via=":B_EW_4_22_0" dir="l" state="m"/>
+    <connection from=":B_EW_4_22" to="b_diag_43" fromLane="0" toLane="3" dir="l" state="M"/>
+    <connection from=":B_EW_4_15" to="b_ew_43" fromLane="0" toLane="1" via=":B_EW_4_23_0" dir="r" state="m"/>
+    <connection from=":B_EW_4_23" to="b_ew_43" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from=":B_EW_4_16" to="b_diag_45" fromLane="0" toLane="3" via=":B_EW_4_24_0" dir="l" state="m"/>
+    <connection from=":B_EW_4_24" to="b_diag_45" fromLane="0" toLane="3" dir="l" state="M"/>
+    <connection from=":B_EW_4_17" to="b_ew_4out" fromLane="0" toLane="2" via=":B_EW_4_25_0" dir="L" state="m"/>
+    <connection from=":B_EW_4_25" to="b_ew_4out" fromLane="0" toLane="2" dir="L" state="M"/>
+    <connection from=":B_EW_out_0" to="b_ew_out4" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":B_EW_out_1" to="b_ew_out4" fromLane="0" toLane="2" dir="l" state="M"/>
+    <connection from=":B_EW_out_2" to="b_ew_out4" fromLane="0" toLane="3" dir="l" state="M"/>
+    <connection from=":B_EW_out_3" to="b_diag_54" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":B_EW_out_4" to="b_diag_54" fromLane="0" toLane="2" dir="l" state="M"/>
+    <connection from=":B_EW_out_5" to="b_diag_54" fromLane="0" toLane="3" dir="l" state="M"/>
     <connection from=":B_NS_2_0" to="t_ew_b0" fromLane="0" toLane="1" via=":B_NS_2_18_0" dir="r" state="m"/>
     <connection from=":B_NS_2_18" to="t_ew_b0" fromLane="0" toLane="1" dir="r" state="M"/>
     <connection from=":B_NS_2_1" to="b_ns_23" fromLane="0" toLane="1" dir="s" state="M"/>
@@ -2302,17 +2404,23 @@
     <connection from=":B_EW_4_c0" to=":B_EW_4_w0" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":B_EW_4_c1" to=":B_EW_4_w1" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":B_EW_4_c2" to=":B_EW_4_w2" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":B_EW_4_w0" to=":B_EW_4_c2" fromLane="0" toLane="0" tl="B_EW_4" linkIndex="14" dir="s" state="M"/>
+    <connection from=":B_EW_4_c3" to=":B_EW_4_w3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":B_EW_4_c4" to=":B_EW_4_w4" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":B_EW_4_w0" to=":B_EW_4_c4" fromLane="0" toLane="0" tl="B_EW_4" linkIndex="22" dir="s" state="M"/>
     <connection from=":B_EW_4_w0" to="b_diag_43" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from="b_ew_out4" to=":B_EW_4_w0" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":B_EW_4_w1" to=":B_EW_4_c0" fromLane="0" toLane="0" tl="B_EW_4" linkIndex="12" dir="s" state="M"/>
-    <connection from=":B_EW_4_w1" to="b_ew_4out" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from="b_ew_34" to=":B_EW_4_w1" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":B_EW_4_w2" to=":B_EW_4_c1" fromLane="0" toLane="0" tl="B_EW_4" linkIndex="13" dir="s" state="M"/>
-    <connection from=":B_EW_4_w2" to="b_ew_43" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from="b_diag_34" to=":B_EW_4_w2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="b_diag_54" to=":B_EW_4_w0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":B_EW_4_w1" to=":B_EW_4_c0" fromLane="0" toLane="0" tl="B_EW_4" linkIndex="18" dir="s" state="M"/>
+    <connection from="b_ew_out4" to=":B_EW_4_w1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":B_EW_4_w2" to=":B_EW_4_c1" fromLane="0" toLane="0" tl="B_EW_4" linkIndex="19" dir="s" state="M"/>
+    <connection from=":B_EW_4_w2" to="b_diag_45" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":B_EW_4_w3" to=":B_EW_4_c2" fromLane="0" toLane="0" tl="B_EW_4" linkIndex="20" dir="s" state="M"/>
+    <connection from=":B_EW_4_w3" to="b_ew_4out" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="b_ew_34" to=":B_EW_4_w3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":B_EW_4_w4" to=":B_EW_4_c3" fromLane="0" toLane="0" tl="B_EW_4" linkIndex="21" dir="s" state="M"/>
+    <connection from=":B_EW_4_w4" to="b_ew_43" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="b_diag_34" to=":B_EW_4_w4" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":B_EW_out_w0" to="b_ew_out4" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from="b_ew_4out" to=":B_EW_out_w0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="b_diag_45" to=":B_EW_out_w0" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":B_NS_1_w0" to="b_ns_12" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from="b_ns_21" to=":B_NS_1_w0" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":B_NS_2_c0" to=":B_NS_2_w0" fromLane="0" toLane="0" dir="s" state="M"/>

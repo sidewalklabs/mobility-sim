@@ -233,6 +233,18 @@ major_arterial:
         <lane index="2" width="5" disallow="tram bicycle pedestrian"/>
         <lane index="3" width="5" disallow="tram bicycle pedestrian"/>
     </edge>
+    <edge id="b_diag_45" from="B_EW_4" to="B_EW_out" priority="-1" type="major_arterial">
+        <lane index="0" width="2" allow="pedestrian"/>
+        <lane index="1" width="5" disallow="tram bicycle pedestrian"/>
+        <lane index="2" width="5" disallow="tram bicycle pedestrian"/>
+        <lane index="3" width="5" disallow="tram bicycle pedestrian"/>
+    </edge>
+    <edge id="b_diag_54" from="B_EW_out" to="B_EW_4" priority="-1" type="major_arterial">
+        <lane index="0" width="2" allow="pedestrian"/>
+        <lane index="1" width="5" disallow="tram bicycle pedestrian"/>
+        <lane index="2" width="5" disallow="tram bicycle pedestrian"/>
+        <lane index="3" width="5" disallow="tram bicycle pedestrian"/>
+    </edge>
     <edge id="b_ew_0b" from="B_EW_0" to="B_NS_4" priority="-1" type="major_arterial">
         <lane index="0" width="2" allow="pedestrian"/>
         <lane index="1" width="5" disallow="tram bicycle pedestrian"/>

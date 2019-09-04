@@ -3,7 +3,7 @@
         <opengl antialiase="0" dither="0"/>
         <!-- <background backgroundColor="220,220,220" showGrid="0" gridXSize="100.00" gridYSize="100.00"/> -->
         <decal filename="/Users/joyce@intern.sidewalklabs.com/Desktop/villiers_west_anonymized.png" centerX="500.00" centerY="290.00" centerZ="0.00" width="1000.00" height="600.00" altitude="0.00" rotation="0.00" tilt="0.00" roll="0.00" layer="0.00" screenRelative="0"/>
-        <edges laneEdgeMode="0" scaleMode="0" laneShowBorders="1" showLinkDecals="1" showRails="1" hideConnectors="1" widthExaggeration="1.00"
+        <edges laneEdgeMode="0" scaleMode="0" laneShowBorders="0" showLinkDecals="1" showRails="1" hideConnectors="1" widthExaggeration="1.00"
                 edgeName_show="0" edgeName_size="50.00" edgeName_color="orange"
                 internalEdgeName_show="0" internalEdgeName_size="40.00" internalEdgeName_color="128,64,0"
                 cwaEdgeName_show="0" cwaEdgeName_size="50.00" cwaEdgeName_color="magenta"
@@ -11,7 +11,7 @@
             <colorScheme name="uniform">
                 <entry color="50,50,50" name="road"/>
                 <entry color="180,180,180" name="sidewalk"/>
-                <entry color="130,160,130" name="bike lane"/>
+                <entry color="130,150,130" name="bike lane"/>
                 <entry color="0,0,0,0" name="green verge"/>
                 <entry color="150,200,200" name="waterway"/>
             </colorScheme>
@@ -311,19 +311,19 @@
                 <entry color="20.00" threshold="1.00"/>
             </scalingScheme>
         </edges>
-        <vehicles vehicleMode="8" vehicleQuality="2" vehicle_minSize="0.00" vehicle_exaggeration="1.50" vehicle_constantSize="0" showBlinker="1"
+        <vehicles vehicleMode="3" vehicleQuality="3" vehicle_minSize="0.00" vehicle_exaggeration="1.50" vehicle_constantSize="0" showBlinker="1"
                   vehicleName_show="0" vehicleName_size="50.00" vehicleName_color="204,153,0">
             <colorScheme name="given vehicle/type/route color">
                 <entry color="yellow"/>
             </colorScheme>
             <colorScheme name="uniform">
-                <entry color="yellow"/>
+                 <entry color="yellow"/>
             </colorScheme>
             <colorScheme name="given/assigned vehicle color">
                 <entry color="yellow"/>
             </colorScheme>
             <colorScheme name="given/assigned type color">
-                <entry color="yellow"/>
+                 <entry color="yellow"/>
             </colorScheme>
             <colorScheme name="given/assigned route color">
                 <entry color="yellow"/>
@@ -432,7 +432,7 @@
         </vehicles>
        <!--  <persons personMode="4" personQuality="2" person_minSize="1.00" person_exaggeration="1.00" person_constantSize="0"
                  personName_show="1" personName_size="70.00" personName_color="yellow"> -->
-        <persons personMode="0" personQuality="2" person_minSize="10.00" person_exaggeration="8.00" person_constantSize="0"
+        <persons personMode="0" personQuality="3" person_minSize="10.00" person_exaggeration="8.00" person_constantSize="0"
                  personName_show="0" personName_size="50.00" personName_color="0,153,204" personName_constantSize="0">
             <colorScheme name="given person/type color">
                 <entry color="yellow"/>
@@ -523,7 +523,7 @@
         <junctions junctionMode="0" drawLinkTLIndex="0" drawLinkJunctionIndex="0"
                    junctionName_show="0" junctionName_size="50.00" junctionName_color="0,255,128"
                    internalJunctionName_show="0" internalJunctionName_size="50.00" internalJunctionName_color="0,204,128"
-                   showLane2Lane="0" drawShape="1">
+                   showLane2Lane="0" drawShape="1" drawCrossingsAndWalkingareas="0">
             <colorScheme name="uniform">
                 <entry color="black"/>
                 <entry color="150,200,200" name="waterway"/>

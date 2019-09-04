@@ -1,0 +1,21 @@
+<!-- <crossing node="T_EW_4" edges="t_ew_34 t_ew_43 b_diag_21" priority="true"/> -->
+<walkingArea node="T_EW_4" edges="t_ew_34"/>
+
+
+<!--
+
+          B_NS_1         A_NS_1         A_NS_2         A_NS_3   B_D1
+            ||             ||             ||             ||      ||
+            ||             ||             ||             ||        ||
+T_EW_0 == B_NS_2 ======= T_EW_1 ======= T_EW_2 ======= T_EW_3 === T_EW_4
+            ||             ||             ||             ||          ||            
+            ||             ||             ||             ||            ||   
+          B_NS_3 ======= L_EW_1 ======= L_EW_2 ======= L_EW_3 ====== L_EW_4
+            ||             ||             ||             ||              ||
+            ||             ||             ||             ||                ||
+B_EW_0 == B_NS_4 ======= B_EW_1 ======= B_EW_2 ======= B_EW_3 ========== B_EW_4 == B_EW_out
+            ||             ||             ||             ||
+            ||             ||             ||             ||
+          B_NS_5         A_NS_1_X       A_NS_2_X       A_NS_3_X
+
+-->

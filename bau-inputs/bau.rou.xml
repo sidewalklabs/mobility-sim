@@ -1,6 +1,7 @@
 <routes>
-    <vType id="car" accel="1.5" decel="4.5" vClass="passenger"/>
+    <vType id="car" accel="1.5" decel="4.5" vClass="passenger" color="255,20,0"/>
+    <vType id="bus" accel="3" decel="6" vClass="bus" color="yellow"/>
     <vType id="ped" accel="1" decel="1" vClass="pedestrian"/>
-    <vType id="bike" accel="1" decel="2" maxSpeed="6.0" vClass="bicycle"/>
-    <vType id="tram" accel="4" decel="6" vClass="tram" />
+    <vType id="bike" accel="1" decel="2" maxSpeed="6.0" vClass="bicycle" color="50,230,255" imgFile="/Users/joyce@intern.sidewalklabs.com/Documents/sumo-test/blog/bike.jpg"/>
+    <vType id="tram" accel="4" decel="6" vClass="tram" color="green"/>
 </routes>

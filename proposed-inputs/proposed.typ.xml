@@ -34,9 +34,9 @@
 -->
 
 <types version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/types_file.xsd">
-    <type id="accessway" numLanes="3" speed="6.15"/>
+    <type id="accessway" numLanes="3" speed="6"/> 
     <type id="boulevard" numLanes="5" speed="11.15"/>
-    <type id="laneway" speed="2.25" allow="pedestrian"/>
+    <type id="laneway" speed="1.5" allow="pedestrian"/>
     <type id="transitway" numLanes="4" speed="11.15"/>
 
 </types>
