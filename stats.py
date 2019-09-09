@@ -26,9 +26,8 @@ def initStats():
 
 def parseStats():
     for node in root:
-        if node.tag == 'tripinfo':
-            # is vehicle, node.attrib['id']
-
+        # if vehicle: 
+        if node.tag == 'tripinfo': 
             # <tripinfo id="vehicle732" 
             #         depart="732.00"
             #         departLane="a2_ns_12_2"
@@ -62,10 +61,8 @@ def parseStats():
                 stats[category]['aveSpeed'].append(aveSpeed)
                 stats[category]['duration'].append(float(node.attrib['duration']))
 
-
+        # if pedestrian:
         elif node.tag == 'personinfo':
-            # is person
-
             # <personinfo id="person267" depart="267.00" type="DEFAULT_PEDTYPE">
          #        <walk depart="267.00"
          #            departPos="0.00"

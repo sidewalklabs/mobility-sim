@@ -98,9 +98,8 @@ class SumoMain:
     def load_graphs(self):
         net = sumolib.net.readNet(self.sim_type + '.net.xml')
         
-        # Don't add these to our node list to avoid generating it as a start/destination
-        # TODO: find a better way of doing this
-
+        # build sub-graphs for each vehicle type (car, transit, ped, bike), based on the allowed vehicle types 
+        # of each edge
         for node in net._nodes:
             nid = node.getID()
             neighbors = set()
@@ -113,7 +112,7 @@ class SumoMain:
                 if to_node != nid: neighbors.add(to_node)
                 if from_node != nid: neighbors.add(from_node)
 
-                # add this node/edge to appropriate transit graphs
+                # add this node/edge to appropriate mobility graphs
                 for vehicle_type, graph in self.graph_map.items(): 
                     if edge.allows(vehicle_type):
                         allowed_types.add(vehicle_type)
@@ -126,24 +125,23 @@ class SumoMain:
                 for T in allowed_types:
                     self.start_nodes[T].add(nid)
 
-        # temp get-around
+        # for the sake of the blog post visuals, spawn pedestrians at laneway edges (e.g. where subway stops
+        # might be located) to show how laneways can be utilized 
         self.start_nodes["pedestrian"].add("B_NS_3")
         if self.sim_type == "proposed":
             self.start_nodes["pedestrian"].add("L_EW_4") # in bau, this street is one-way, can't start here
 
-        # import pdb
-        # pdb.set_trace()
 
-
-
+    # get list of nodes that vehicles/peds may spawn from or exit to
     def weighted_start_nodes(self, vehicle_type):
         if vehicle_type != "pedestrian":
+            # for non-pedestrians, give additional emphasis to big roadway entrance/exits
             return list(self.start_nodes[vehicle_type]) + self.heavy_traffic
         else:
             return list(self.start_nodes[vehicle_type])
 
-    
 
+    # generate a random route (list of nodes to travel) for a given vehicle type 
     def generate_route_from_graph(self, vehicle_type, start_node=None, end_node=None):
         try:
             graph = self.graph_map[vehicle_type]
@@ -161,17 +159,13 @@ class SumoMain:
         paths = [p for p in nx.all_shortest_paths(graph, source=start_node, target=end_node, weight='weight')]
         start_to_end = random.choice(paths)
 
-
         # with small random chance in BAU, force a car to take the local route
         if self.sim_type == "bau" and random.random() < 0.03:
             first_nodes = random.choice([["B_NS_1", "B_NS_2"], ["T_EW_0", "B_NS_2"], ["B_EW_0", "B_NS_4"], ["B_NS_5", "B_NS_4"]])
             local = nx.shortest_path(graph, source="B_NS_3", target="L_EW_4")
-            print('GENERATING forced local path')
             if vehicle_type == "pedestrian":
-                print('is pedestrian')
                 start_to_end = first_nodes + local
             else:
-                print('\t' + vehicle_type)
                 start_to_end = first_nodes + local + random.choice([["T_EW_4", "B_D1"], ["B_EW_4", "B_EW_out"]])
 
         # TODO: fix (for some reason in BAU, the junction T_EW_4 does not generate any pedestrian crossings)
@@ -186,7 +180,7 @@ class SumoMain:
 
         return self.nodes_to_edge_path(graph, start_to_end)
 
-
+    # convert node path to edge path (necessary for traci routes)
     def nodes_to_edge_path(self, graph, node_path):    
         edge_path = []
         for i in range(1, len(node_path)):
@@ -196,6 +190,7 @@ class SumoMain:
             edge_path.append(edge_id)
         return edge_path
 
+    # add a particular bus or tram with a given id
     def add_planned_vehicle(self, v_type, route_id, count):
         if v_type == "tram":
             graph = self.graph_map["tram"]
@@ -211,17 +206,19 @@ class SumoMain:
         traci.vehicle.add(vehID=vehicle_id, typeID=v_type, routeID=traci_route_id) # typeID=self.type_map[v_type]
 
 
+    # fill laneway with even more pedestrians (really no point to this outside of blog post visuals)
     def add_pedestrian_in_block(self, ped_id):
         trip_id = str(ped_id) + "_lane"
         route_id = "route" + trip_id
         endpoints = ["B_NS_3", "L_EW_4"] if random.random() < 0.5 else ["L_EW_4", "B_NS_3"]
         edges = self.generate_route_from_graph("pedestrian", start_node=endpoints[0], end_node=endpoints[1])
         person_id = "person" + trip_id
+        if len(edges) == 0:
+            return
         traci.person.add(personID=person_id, edgeID=edges[0], pos=0)
-        traci.person.appendWalkingStage(personID=person_id, edges=edges[1:], arrivalPos=0)
+        traci.person.appendWalkingStage(personID=person_id, edges=edges, arrivalPos=0)
 
 # BAU: how many more cars?
-
 # number of people who are driving cars in BAU who would have taken tram in proposed:
 # each tram runs every 5min for one hour = 12 trips per tram, 6 tram routes, ~80 person/tram = 5760
 # say in BAU, 20% will take bus (PERSONS_PER_BUS += 16), 80% take car: (0.8 * 5760)/1.67 = 2760 more cars
@@ -229,14 +226,13 @@ class SumoMain:
 
 
     def run(self):
-        self.spawnrate=1
+        self.spawnrate=2
         simlen = 3600 # one hour
         total_throughput = 0
 
         # at each point of the simulation, if someone chooses to take a bus/tram, we keep count of how many
         # people have chosen that particular vehicle. If the vehicle is full, we assume "worst case scenario," 
         # i.e. the person will take a car instead.
-        # (note: we model worst case behavior to see maximum strain on our simulation)
         bus_occupancy = defaultdict(int) # maps {bus_id => current occupancy}
         tram_occupancy = defaultdict(int)
 
@@ -256,37 +252,36 @@ class SumoMain:
 
             # Spawn 2-3 people, people choose how to get through network based on weighted likelihoods (network-dependent)
             if count % self.spawnrate == 0:
-                # is_bau = 1 if self.sim_type == "bau" else 0
-                # num_to_generate = random.randint(1,3)
-                # if self.sim_type == "bau" and random.random() < 0.76: # see calculation above
-                #     num_to_generate += 1
                 num_to_generate = random.randint(2,3)
                 total_throughput += num_to_generate
 
-                # if proposed, show we can fill laneway with a lot more pedestrians at no cost to other modes - these guys just hanging around
-                if self.sim_type == "proposed" and random.random() < 0.15:
+                # if proposed, show we can fill laneway with a lot more pedestrians at no cost to other modes - these guys just hang out
+                # in expanded public realm
+                if self.sim_type == "proposed" and random.random() < 0.05:
                     self.add_pedestrian_in_block(count)
 
+                # 
                 for i in range(num_to_generate):
                     r = random.random()
                     if self.sim_type == "bau":
                         if r < 0.7:
                             v_type = "passenger" # 70%
-                        elif r < 0.8:
-                            v_type = "bus" # 10%
+                        elif r < 0.85:
+                            v_type = "bus" # 15%
                         else:
-                            v_type = "pedestrian" # 20%
+                            v_type = "pedestrian" # 15%
                     else:
                         if r < 0.4:
                             v_type = "passenger" # 40%
-                        elif r < 0.5:
-                             v_type = "bus" # 10%
+                        elif r < 0.47:
+                             v_type = "bus" # 7%
                         elif r < 0.65:
-                            v_type = "tram" # 15%
+                            v_type = "tram" # 18%
                         elif r < 0.8:
                             v_type = "bicycle" # 15%
                         else:
                             v_type = "pedestrian" # 20%
+
 
                     # if person chooses car, and car on average carries 1.6 people (self.PERSONS_PER_CAR), only 1/1.6 chance of spawning a new car
                     if v_type == "passenger" and random.random() > 1/1.6:
