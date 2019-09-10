@@ -101,6 +101,10 @@ def getCumulative():
 
 def printStats(sim_type):
     with open(sim_type + '_stats.txt', 'w') as f:
+        # WARNING!
+        # These throughput numbers (for bus/tram) may not be accurate,
+        # since the generation of people/vehicles have changed to support
+        # pre-configured fixed throughput. 
         throughput = {
             'car': vCount['car']*PERSONS_PER_CAR,
             'bus': vCount['bus']*PERSONS_PER_BUS,

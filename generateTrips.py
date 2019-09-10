@@ -39,7 +39,7 @@ class SumoMain:
         self.tram_graph = nx.DiGraph()
         self.start_nodes = defaultdict(set)
 
-        # map of vClass to transit graph
+        # map from vehicle's vClass to its transit graph
         self.graph_map = {
             "pedestrian": self.ped_graph,
             "passenger": self.car_graph,
@@ -48,6 +48,7 @@ class SumoMain:
             "tram": self.tram_graph
         }
 
+        # map from vClass (built-in to SUMO) to named vTypes (defined and customized in the .typ.xml files)
         self.type_map = {
             "passenger": "car",
             "bus": "bus",
@@ -56,17 +57,19 @@ class SumoMain:
             "tram": "tram"
         }
 
+        # give greater traffic emphasis to boulevard entrance/exits
         self.heavy_traffic = ['B_NS_1', 'B_NS_5', 'B_D1', 'B_EW_out']
 
-
+        # initial assumed "cost" of using each type of street for travel, used in dijkstra "shortest path" routing
         self.edge_weights = {
-            'l': 0.94,    # laneway
-            'a': 1,       # accessway
+            'l': 1,       # laneway
+            'a': 0.98,    # accessway
             't': 0.95,    # transitway
             'b': 0.9      # boulevard
         } 
 
-        # (start, end) pairs
+        # Bus and tram (start, end) pairs for their fixed routes
+        # Note: ufortunately these are all manually chosen + configured right now
         self.tram_routes = [ 
             ('B_NS_1', 'B_NS_5'), # NS
             ('B_NS_5', 'B_NS_1'),
@@ -77,7 +80,6 @@ class SumoMain:
             ('B_D1', 'B_EW_out'), # Diag
             ('B_EW_out', 'B_D1'),
         ]
-
         self.bus_routes = [
             ('T_EW_0', 'B_EW_out'), # WE transitway down
             ('B_EW_out', 'T_EW_0'),
@@ -92,7 +94,6 @@ class SumoMain:
         self.PERSONS_PER_CAR = 1.6
         self.BUS_CAPACITY = 70 # toronto numbers
         self.TRAM_CAPACITY = 125 # toronto numbers
-
 
 
     def load_graphs(self):
@@ -218,12 +219,6 @@ class SumoMain:
         traci.person.add(personID=person_id, edgeID=edges[0], pos=0)
         traci.person.appendWalkingStage(personID=person_id, edges=edges, arrivalPos=0)
 
-# BAU: how many more cars?
-# number of people who are driving cars in BAU who would have taken tram in proposed:
-# each tram runs every 5min for one hour = 12 trips per tram, 6 tram routes, ~80 person/tram = 5760
-# say in BAU, 20% will take bus (PERSONS_PER_BUS += 16), 80% take car: (0.8 * 5760)/1.67 = 2760 more cars
-# so at each second of BAU, there is a ~76% of generating another car
-
 
     def run(self):
         self.spawnrate=2
@@ -260,7 +255,8 @@ class SumoMain:
                 if self.sim_type == "proposed" and random.random() < 0.05:
                     self.add_pedestrian_in_block(count)
 
-                # 
+                # mode likelihoods in BAU are a conservative estimate of commute averages in US: https://www.citylab.com/transportation/2019/01/commuting-to-work-data-car-public-transit-bike/580507/
+                # in proposed, they are somewhere between BAU numbers and our calculated "ideal" numbers in Toronto
                 for i in range(num_to_generate):
                     r = random.random()
                     if self.sim_type == "bau":
@@ -282,10 +278,9 @@ class SumoMain:
                         else:
                             v_type = "pedestrian" # 20%
 
-
-                    # if person chooses car, and car on average carries 1.6 people (self.PERSONS_PER_CAR), only 1/1.6 chance of spawning a new car
+                    # if person chooses car, and a car on average carries 1.6 people (self.PERSONS_PER_CAR), only 1/1.6 chance of spawning a new car
                     if v_type == "passenger" and random.random() > 1/1.6:
-                        continue # person takes existing car
+                        continue # person takes existing car, don't spawn
 
                     if v_type == "bus":
                         bus_id = random.randint(0,5)
@@ -310,7 +305,7 @@ class SumoMain:
                     if v_type != "pedestrian":
                         vehicle_id = "vehicle" + trip_id
                         traci.route.add(routeID=route_id, edges=edges)
-                        traci.vehicle.add(vehID=vehicle_id, typeID=self.type_map[v_type], routeID=route_id) # typeID=self.type_map[v_type]
+                        traci.vehicle.add(vehID=vehicle_id, typeID=self.type_map[v_type], routeID=route_id)
                     else:
                         if len(edges) > 1:
                             person_id = "person" + trip_id
