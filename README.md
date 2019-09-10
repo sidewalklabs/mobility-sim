@@ -1,20 +1,22 @@
 # Mobility Simulation
 
-Here lies the code behind our street design simulation [blog post](https://medium.com/sidewalk-talk/https-medium-com-sidewalk-talk-street-sim-33da7e1a8ffb) (Sept 2019).
+This repo contains the code behind our street design simulation [blog post](https://medium.com/sidewalk-talk/https-medium-com-sidewalk-talk-street-sim-33da7e1a8ffb) (Sept 2019).
 
-The XML files in `bau-inputs/` and `proposed-inputs/` are manually configured. They specify the geometry of the nodes, edges, routes (in which we parameterize vehicle types), and street types of our network. Running commands such as the following:
+The XML files in `bau-inputs/` and `proposed-inputs/` are manually configured. These files specify the geometry of the nodes, edges, routes (in which we parameterize vehicle types), and street types of our network. Running commands such as the following:
 
 `netconvert -c bau.netccfg`
+
 `netconvert -c proposed.netccfg` 
 
 will generate the "network files" `bau.net.xml` and `proposed.net.xml`. It is not recommended to manually edit these network files; any change to the network should be made through its input files and the commands above should be re-run to produce a new network file. 
 
-Running `sumo-gui -c proposed.sumocfg` or `sumo-gui -c bau.sumocfg` should open up and start the simulation in the SUMO GUI. However, this code base generates trips programmatically via TraCi, so we instead call:
+Running `sumo-gui -c proposed.sumocfg` or `sumo-gui -c bau.sumocfg` should open up and start the simulation in the SUMO GUI. However, since this repo generates trips programmatically via TraCi, we need to instead call:
 
 `python3 generateTrips.py proposed` or
+
 `python3 generateTrips.py bau`
 
-to launch the GUI and simulation. See generateTrips.py for more details on how the simulation is run (in particular, how self.spawnrate can be used to effectively increase/decrease trip demand). 
+to launch the GUI and spawn vehicles/pedestrians in simulation. See generateTrips.py for more details on how the simulation is run (in particular, how `self.spawnrate` can be used to effectively increase/decrease trip demand). 
 
 Finally, some metrics (e.g. mean/std for wait times by vehicle type, etc.) can be collected by running 
 
